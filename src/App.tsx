@@ -34,12 +34,12 @@ function App() {
         zIndex: 100,
         boxShadow: 'var(--shadow-sm)'
       }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="container header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <MedisLogo />
           </Link>
-          <div style={{ display: 'flex', gap: '3rem', alignItems: 'center' }}>
-            <nav style={{ display: 'flex', gap: '2rem' }}>
+          <div className="header-nav-wrap" style={{ display: 'flex', gap: '3rem', alignItems: 'center' }}>
+            <nav className="header-nav" style={{ display: 'flex', gap: '2rem' }}>
               <Link to="/" style={{ color: 'var(--text-primary)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>הקליניקה</Link>
               <Link to="/treatments" style={{ color: 'var(--text-primary)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>סוגי טיפול</Link>
               <Link to="/academy" style={{ color: 'var(--text-primary)', fontWeight: 500, display: 'flex', alignItems: 'center' }}>מדיס אקדמי</Link>

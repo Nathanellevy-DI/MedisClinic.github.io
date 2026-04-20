@@ -157,8 +157,35 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
-  .section { padding: 3rem 0; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.4rem; }
+  .section { padding: 4rem 0; }
   .container { padding: 0 1.5rem; }
+  
+  .header-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0 !important;
+  }
+  
+  .header-nav-wrap {
+    flex-direction: column;
+    gap: 1.5rem !important;
+  }
+  
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem !important;
+  }
+  
+  .flex-wrap-mobile {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .flex-wrap-mobile .btn {
+    width: 100%;
+  }
 }

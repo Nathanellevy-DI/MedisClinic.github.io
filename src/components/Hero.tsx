@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
           <strong style={{ display: 'block', marginTop: '1rem', fontWeight: 500, fontSize: '0.9rem', color: 'var(--text-primary)' }}>— ג'ורג' גודהארט</strong>
         </blockquote>
         
-        <div className="flex" style={{ gap: '1.5rem', justifyContent: 'center' }}>
+        <div className="flex flex-wrap-mobile" style={{ gap: '1.5rem', justifyContent: 'center' }}>
           <Link to="/appointment" className="btn btn-primary">
             קביעת תור
           </Link>

@@ -43,7 +43,7 @@ const Treatments = () => {
 
         {/* Spacious Grid Layout as requested */}
         <div className="grid" style={{ 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
           columnGap: '4rem', 
           rowGap: '6rem' 
         }}>
