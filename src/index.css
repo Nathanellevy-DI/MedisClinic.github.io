@@ -149,6 +149,10 @@ a:hover {
 }
 
 .btn-outline:hover {
+  background-color: var(--text-primary);
+  color: white;
+}
+
 .grid {
   display: grid;
 }
