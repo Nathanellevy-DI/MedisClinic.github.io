@@ -6,7 +6,7 @@ const Treatments = () => {
       img: 'https://medisclinic.co.il/wp-content/uploads/סוגי-טיפול-שיפור-יכולות.jpg'
     },
     {
-      title: 'שיקום בעיות ופציעות אורטופדיות: הדרך לחזרה לתפקוד מלא',
+      title: 'שיקום בעיות ופציעות אורטופדיות',
       desc: 'שיקום נכון ואפקטיבי יכול לשפר משמעותית את התוצאות, להפחית כאב, להחזיר את טווח התנועה ולמנוע בעיות חוזרות.',
       img: 'https://medisclinic.co.il/wp-content/uploads/סוגי-טיפול-פציעות-אורטופדיות.jpg'
     },
@@ -17,7 +17,7 @@ const Treatments = () => {
     },
     {
       title: 'טיפול באיברים פנימיים',
-      desc: 'טיפול באיברים פנימיים מתייחס למגוון שיטות וטכניקות שנועדו לשפר את תפקוד האיברים הפנימיים של הגוף, כגון מערכת העיכול, מערכת הנשימה והכבד.',
+      desc: 'טיפול באיברים פנימיים מתייחס למגוון שיטות וטכניקות שנועדו לשפר את תפקוד האיברים הפנימיים של הגוף.',
       img: 'https://medisclinic.co.il/wp-content/uploads/סוגי-טיפול-איברים-פנימיים.jpg'
     },
     {
@@ -27,7 +27,7 @@ const Treatments = () => {
     },
     {
       title: 'טיפולים ושיקום לאחר ניתוחים אורטופדים',
-      desc: 'שלב נרטיבי לאחר ניתוח אורטופדי. תהליך ההחלמה והשיקום מהווה צעד קריטי בדרך חזרה לתפקוד מלא.',
+      desc: 'תהליך ההחלמה והשיקום מהווה צעד קריטי בדרך חזרה לתפקוד מלא לאחר ניתוח אורטופדי.',
       img: 'https://medisclinic.co.il/wp-content/uploads/סוגי-טיפול-שיקום.jpg'
     }
   ];
@@ -35,55 +35,41 @@ const Treatments = () => {
   return (
     <main style={{ padding: '4rem 0', backgroundColor: 'var(--bg-secondary)' }}>
       <div className="container">
-        
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <h1 style={{ color: 'var(--text-primary)', fontSize: '3rem' }}>סוגי הטיפול בקליניקה</h1>
-          <div style={{ width: '80px', height: '4px', backgroundColor: 'var(--accent-primary)', margin: '0 auto' }}></div>
+
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h1 style={{ color: 'var(--text-primary)' }}>סוגי הטיפול בקליניקה</h1>
+          <div style={{ width: '80px', height: '4px', backgroundColor: 'var(--accent-primary)', margin: '1rem auto 0' }} />
         </div>
 
-        {/* Spacious Grid Layout as requested */}
-        <div className="grid" style={{ 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', 
-          columnGap: '4rem', 
-          rowGap: '6rem' 
-        }}>
+        <div className="treatments-grid">
           {treatments.map((treatment, idx) => (
-            <div key={idx} style={{ 
-              backgroundColor: 'var(--bg-primary)', 
-              borderRadius: '24px', 
-              overflow: 'hidden',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
-              display: 'flex',
-              flexDirection: 'column',
-              transition: 'transform var(--transition-normal)'
-            }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+            <div key={idx}
+              style={{
+                backgroundColor: 'var(--bg-primary)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.07)',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'transform var(--transition-normal)'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-8px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
-              <div style={{ height: '240px', overflow: 'hidden' }}>
-                <img 
-                  src={treatment.img} 
-                  alt={treatment.title} 
+              <div style={{ height: '220px', overflow: 'hidden' }}>
+                <img
+                  src={treatment.img}
+                  alt={treatment.title}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
-              <div style={{ padding: '2.5rem 2rem', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-                <h3 style={{ fontSize: '1.4rem', color: 'var(--text-primary)', marginBottom: '1rem', minHeight: '60px' }}>
+              <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column', textAlign: 'center', alignItems: 'center' }}>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>
                   {treatment.title}
                 </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '2rem', flex: 1 }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1 }}>
                   {treatment.desc}
                 </p>
-                <button className="btn" style={{ 
-                  backgroundColor: 'transparent', 
-                  color: 'var(--accent-secondary-teal)', 
-                  fontWeight: 700, 
-                  fontSize: '0.9rem',
-                  letterSpacing: '1px',
-                  padding: 0
-                }}>
-                  קרא עוד &gt;
-                </button>
               </div>
             </div>
           ))}
